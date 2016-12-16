@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Routing</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>	
+</head>
+
+<body ng-app="MyApp">
+	<nav>
+		<a href="#/page1">About Us</a>
+		<a href="#/page2">Our Services</a>
+		<a href="#/page3">Contact Us</a>
+
+		<ng-view></ng-view>
+	</nav>
+
+	<script type="text/javascript">
+		var app = angular.module("MyApp", ["ngRoute"]);
+
+		app.config(function($routeProvider){
+			$routeProvider
+			 .when("/",{
+			 	templateUrl : "main.html"
+			 })
+			 .when("/page1",{
+			 	templateUrl : "page1.html"
+			 })
+			 .when("/page2",{
+			 	templateUrl : "page2.html"
+			 })
+			 .when("/page3",{
+			 	templateUrl : "page3.html"
+			 })
+
+		})
+	</script>
+
+</body>
+</html>

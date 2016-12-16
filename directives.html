@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directives</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>	
+</head>
+
+<body ng-app="MyApp">
+	<div ng-controller="MyCtrl">
+	<p ng-repeat="x in countries">{{x}}</p>		
+	</div>
+
+
+	<!--script-->
+	<script type="text/javascript">
+		var app = angular.module("MyApp", []);
+
+		app.controller('MyCtrl', function($scope){
+			$scope.countries = [
+				"India",
+				"New Zealand",
+				"Unites States of America",
+				"Poland"
+			]
+		});
+	</script>
+
+</body>
+</html>

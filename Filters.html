@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filters</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+</head>
+
+<body ng-app="MyApp">
+
+	<div ng-controller="MyCtrl">
+		<p>Employee First Name: {{firstName | uppercase}}</p>
+		<p>Employee last Name: {{lastName | lowercase}}</p>
+		<p>Employee Salary: {{salary | currency}}</p>		
+	</div>
+
+	<!--script-->
+	<script type="text/javascript">
+		var app = angular.module('MyApp', []);
+		app.controller('MyCtrl', function($scope){
+			$scope.firstName = 'Paul';
+			$scope.lastName = 'WALker';
+			$scope.salary = 50000;
+		});
+	</script>
+
+</body>
+</html>

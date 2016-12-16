@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Expressions</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+</head>
+
+<body ng-app>
+
+	<div ng-init=" price = 5; cost = 3; employee = {firstName:'John', lastName:'Doe'};">
+		<h3>First Expression: {{2 + 7}}</h3> <!--Prints 9-->
+		<br>
+		<h3>Second Expression: {{3 * 7}}</h3><!--Prints 21-->
+		<br>
+		<h3>Third Expression: {{price * cost}}</h3><!--Prints the value of price muktiplied by cost which is 15-->
+		<br>
+		<h3>Fourth Expression: {{employee.firstName +""+ employee.lastName}}</h3><!--Prints John Doe-->
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Services</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>	
+</head>
+
+<body ng-app="MyApp">
+
+
+	<script type="text/javascript">
+		var app = angular.module("MyApp",[]);
+
+		
+	/*	<!--factory methos-->
+		app.factory('MultiplyService', function(){
+			var factory = {};
+
+
+			factory.multiply = function(x ,y){
+				return x * y;
+			}
+			return factory;
+		});*/
+
+
+
+		/*<!--Service Method-->
+		app.controller('MyCtrl', function($scope, $http){
+			$http.get("helloWorld.html").then(function(resposne){
+				$scope.myWelcome = resposne.data;
+			});
+		});*/
+
+
+		/*<!--Custom Service-->
+		 app.service('AddService', function(){
+		 	var result = {};
+
+		 	result.add = function(a, b){
+		 		return a + b;
+		 	}
+
+		 	return result;
+		 });*/
+
+	</script>
+
+</body>
+</html>

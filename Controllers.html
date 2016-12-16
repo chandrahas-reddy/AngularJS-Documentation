@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Controllers</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+</head>
+
+<body ng-app="MyApp">
+
+	<div ng-controller="MyCtrl">
+		<label>Employee Name:<input type="text" ng-model="EMP_Name"></label><br>
+		<label>Employee ID:<input type="text" ng-model="EMP_ID"></label><br>
+		
+		<h3>Employee Name: {{EMP_Name}}</h3>
+		<h3>Employee ID: {{EMP_ID}}</h3>
+	</div>
+
+	<script type="text/javascript">
+		var app = angular.module("MyApp", []);
+		app.controller('MyCtrl', function($scope){
+			$scope.EMP_Name = "Keerthana";
+			$scope.EMP_ID = "12345";
+		});
+	</script>
+
+</body>
+</html>
